@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Dec  1 00:52:36 2024
-
-@author: melih
-"""
-
 import streamlit as st
 import joblib
 import numpy as np
@@ -47,18 +40,18 @@ def user_input_features():
     exang_numeric = 1 if exang == "Yes" else 0
     slope_numeric = {"Upsloping": 0, "Flat": 1, "Downsloping": 2}[slope]
    
-    # Girdi özelliklerini bir araya getir
+
     data = np.array([age,sex_numeric, cp_numeric, trestbps, chol, fbs_numeric, restecg_numeric, thalach, exang_numeric, oldpeak, slope_numeric, ca, thal_numeric])
     return data.reshape(1, -1)
 
-# Kullanıcı girdisi
+
 input_data = user_input_features()
 
-# Tahmin yap
+
 prediction = model.predict(input_data)
 prediction_proba = model.predict_proba(input_data)
 
-# Sonuçları göster
+
 
 
 st.subheader("Prediction Probability and Result")
