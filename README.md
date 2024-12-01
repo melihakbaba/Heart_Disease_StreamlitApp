@@ -20,3 +20,7 @@ This is a web app that uses machine learning to predict the chance of heart dise
     ```bash
     streamlit run app.py
 
+## Web App URL
+You can access the app from the link below.
+
+https://heartdisease-webapp.streamlit.app
