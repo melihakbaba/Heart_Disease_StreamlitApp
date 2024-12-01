@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Nov 29 16:18:18 2024
-
-@author: melih
-"""
-
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
@@ -18,9 +11,9 @@ heart_data.head()
 heart_data.info()
 
 
-X = heart_data.drop(columns=['output'])  # Features
+X = heart_data.drop(columns=['output']) 
 
-y = heart_data['output']  # Target  
+y = heart_data['output']  
 
 # 1: High Chance - 0: Low Chance
 
